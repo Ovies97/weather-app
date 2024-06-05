@@ -1,0 +1,9 @@
+.city-selector {
+    margin: 20px;
+  }
+  
+  mat-form-field {
+    width: 200px;
+    margin-right: 10px;
+  }
+  

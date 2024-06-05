@@ -1,0 +1,30 @@
+
+<div>
+  <form (ngSubmit)="onSubmit()">
+    <input type="text" [(ngModel)]="city" name="city" placeholder="Enter city">
+    <button type="submit">Get Weather</button>
+  </form>
+</div>
+
+<div *ngIf="weatherData">
+  <h2>Current Weather in {{ city }}</h2>
+  <p>Temperature: {{ weatherData.main.temp }}°C</p>
+  <p>Condition: {{ weatherData.weather[0].description }}</p>
+  <img [src]="getWeatherIcon(weatherData.weather[0].description)" alt="Weather Icon">
+</div>
+
+<div class="forecast-container" *ngIf="forecastData && forecastData.length">
+  <h2 class="forecast-heading">5 Day Forecast</h2>
+  <div class="forecast-item" *ngFor="let forecast of forecastData" (click)="selectDay(forecast.dt_txt)">
+    <p>{{ forecast.dt_txt | date: 'fullDate' }}</p>
+    <p>{{ forecast.main.temp }}°C</p>
+    <p>{{ forecast.main.humidity }}% Humidity</p>
+    <p>{{ forecast.wind.speed }} m/s Wind</p>
+    <p>{{ forecast.weather[0].description }}</p>
+    <img [src]="getWeatherIcon(forecast.weather[0].description)" alt="Forecast Icon">
+  </div>
+</div>
+
+
+  
+  

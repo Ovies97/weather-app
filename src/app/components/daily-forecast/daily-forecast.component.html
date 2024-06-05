@@ -1,0 +1,9 @@
+<div *ngIf="forecastData && forecastData.length">
+    <h2>Forecast for {{ date | date: 'fullDate' }}</h2>
+    <div *ngFor="let forecast of forecastData">
+      <p>{{ forecast.dt_txt | date: 'shortTime' }} - {{ forecast.main.temp }}°C - {{ forecast.weather[0].description }}</p>
+      <img [src]="getWeatherIcon(forecast.weather[0].description)" alt="Forecast Icon">
+    </div>
+  </div>
+  
+  

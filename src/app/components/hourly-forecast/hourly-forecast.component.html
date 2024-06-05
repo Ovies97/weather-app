@@ -1,0 +1,7 @@
+<div class="hourly-forecast" fxLayout="column" fxLayoutAlign="center center">
+    <h2>Hourly Forecast for {{ selectedDate }}</h2>
+    <div *ngFor="let hour of hourlyForecast">
+      <p>{{ hour.time }}: {{ hour.temperature }}°C, {{ hour.weatherCondition }}</p>
+    </div>
+  </div>
+  

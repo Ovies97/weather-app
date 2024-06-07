@@ -1,33 +1,89 @@
-/* weather-display.component.css */
-
 /* Container Styles */
 .container {
-  margin-bottom: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Form Styles */
 .form-container {
+  display: flex;
+  justify-content: space-between;
   margin-bottom: 20px;
+}
+
+.form-container input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+.form-container button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.form-container button:hover {
+  background-color: #0056b3;
 }
 
 /* Current Weather Styles */
 .current-weather {
+  text-align: center;
   margin-bottom: 20px;
+}
+
+.current-weather h2 {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.current-weather p {
+  font-size: 1.2em;
+  margin: 5px 0;
+}
+
+.current-weather img {
+  width: 100px;
+  height: 100px;
 }
 
 /* Forecast Styles */
 .forecast-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .forecast-item {
   flex: 1 1 calc(20% - 10px); /* Adjust width to fit 5 items in a row with spacing */
   margin: 5px;
   padding: 10px;
+  background-color: #fff;
+  border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.forecast-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.forecast-item p {
+  margin: 5px 0;
 }
 
 .forecast-item img {
@@ -48,11 +104,129 @@
   }
 }
 
-
+/* Heading Styles */
 .forecast-heading {
   text-align: center;
+  margin-bottom: 20px;
+  color: #007bff;
+  font-size: 1.5em;
+}
+/* Container Styles */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* Form Styles */
+.form-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
 
+.form-container input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-right: 10px;
+}
 
-  
+.form-container button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.form-container button:hover {
+  background-color: #0056b3;
+}
+
+/* Current Weather Styles */
+.current-weather {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.current-weather h2 {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.current-weather p {
+  font-size: 1.2em;
+  margin: 5px 0;
+}
+
+.current-weather img {
+  width: 100px;
+  height: 100px;
+}
+
+/* Forecast Styles */
+.forecast-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.forecast-item {
+  flex: 1 1 calc(20% - 10px); /* Adjust width to fit 5 items in a row with spacing */
+  margin: 5px;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.forecast-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.forecast-item p {
+  margin: 5px 0;
+}
+
+.forecast-item img {
+  width: 50px;
+  height: 50px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .forecast-item {
+    flex: 1 1 calc(50% - 10px); /* Adjust for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .forecast-item {
+    flex: 1 1 100%; /* Stack items on very small screens */
+  }
+}
+
+/* Heading Styles */
+.forecast-heading {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #007bff;
+  font-size: 1.5em;
+}
+
+.error-message {
+  color: red;
+  font-weight: bold;
+  margin-top: 10px;
+}

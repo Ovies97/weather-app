@@ -9,7 +9,6 @@ import { WeatherService } from '../../services/weather.service';
 })
 export class HourlyForecastComponent implements OnInit {
   hourlyForecast: any[] = [];
-  //remove the exclanation mark
   selectedDate!: string;
 
   constructor(private route: ActivatedRoute, private weatherService: WeatherService) {}
@@ -22,6 +21,5 @@ export class HourlyForecastComponent implements OnInit {
   }
 
   getHourlyForecast(date: string): void {
-    // Fetch hourly forecast data from the API
   }
 }
